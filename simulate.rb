@@ -1,5 +1,3 @@
-require File.expand_path('../subnet.rb', __FILE__)
-require File.expand_path('../rules.rb', __FILE__)
 class Simulate 
 
  class << self
