@@ -2,7 +2,7 @@ require File.expand_path('../simulate.rb', __FILE__)
 class RouterSimulator
    class << self
    	def route!
-   		Simulate.start
+   		Simulate.start #starts the simulation
    	  end
    end
 end

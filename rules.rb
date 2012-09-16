@@ -16,12 +16,12 @@ attr_accessor :ip ,:subnet, :destination, :default
   	count = ask("Number of rules: ",Integer) 
   	arr  ||= Array.new
   	count.times { |i| arr << new }
-  	rules = Helper.take_inputs arr
-    default_destination = ask("Default destination: ")
-    no_of_route_statements = ask("Number of route statements: ",Integer) 
+  	rules = Helper.take_inputs arr #All rules defined
+    default_destination = ask("Default destination: ") #default destination defined
+    no_of_route_statements = ask("Number of route statements: ",Integer) #Number of routes
     routes = Array.new(no_of_route_statements)
-    no_of_route_statements.times {|route| routes << ask("Enter Route - #{route}: ") }
-  	Simulate.with_inputs rules, default_destination , routes.compact
+    no_of_route_statements.times {|route| routes << ask("Enter Route - #{route}: ") } #routes accepted
+  	Simulate.with_inputs_to_destination rules, default_destination , routes.compact 
   rescue => e 
   	p e.message
   end

@@ -7,8 +7,8 @@ class Simulate
 	def start
        Rules.get_inputs
 	end
-
-	def with_inputs rules, default_destination, routes
+  #checking the rules and transferring the packets to destination
+	def with_inputs_to_destination rules, default_destination, routes
 		    routed_destination = []
 		    rules.each do |rule|
 			ntwrk_sub = rule.subnet.split('.').reject {|i| i.eql?("0")}
