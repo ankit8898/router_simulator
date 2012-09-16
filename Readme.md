@@ -1,7 +1,11 @@
-### Requires gem Highline
+### Clone the code 
 
-`$ sudo gem install highline`
+`git://github.com/ankit8898/router_simulator.git`
 
-### Execute: it with 
+### Bundle 
 
-`$ ruby router_simulator.rb`
+`bundle install` 
+
+### Start router simulation by
+
+`$ bundle exec rake router`
