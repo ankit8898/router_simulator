@@ -11,3 +11,5 @@
 ### Start router simulation by
 
 `$ bundle exec rake router`
+
+### Assumption Taken: All routes get verified with all rules
