@@ -23,7 +23,7 @@ class Simulate
 			  end
 			end
 		end
-		routed_destination.join(', \n')
+		routed_destination.join(', ')
      end
   end	
 end

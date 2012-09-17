@@ -22,7 +22,7 @@ class Helper
    end
 
    def note
-   say("Note: The IP should be in the format of eg 162.12.13.123 and Numbers will be Integer, currently the application supports Subnets of types #{Subnet::CLASS.keys.join(',')} with values #{Subnet::CLASS.values.join(',')}.  Enjoy Router Simulating!!")
+    say("Note: The IP should be in the format of eg 162.12.13.123 and Numbers will be Integer, currently the application supports Subnets of types #{Subnet::CLASS.keys.join(',')} with values #{Subnet::CLASS.values.join(',')}.  Enjoy Router Simulating!!")
    end
 
    def no rules ,rule
