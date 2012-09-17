@@ -25,11 +25,7 @@
 	        if valid_ntwrk_route.eql?valid_ntwrk_ip
 	        	destination  << rule.destination
 	        else
-	         if rule.default.empty?
-	         	 destination << "NO ROUTE DEFINED"
-	         else
-	          	destination << rule.default   	
-	         end
+	        	rule.default.empty? ? destination << "NO ROUTE DEFINED" : destination << rule.default         	
 	        end
 	      end
 	        destination

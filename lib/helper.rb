@@ -5,9 +5,9 @@
       rules  ||= Array.new
     	count.times { |i| rules << Rules.new }
       rules.each { |rule|
-    		rule.ip = ask("What is the IP for Rule - #{no rules, rule}: ")
-    		rule.subnet = ask("What is the Subnet for Rule - #{no rules, rule}: ")
-    		rule.destination = ask("What is the Destination for Rule - #{no rules, rule}: ")
+    		rule.ip = ask("What is the IP for Rule - #{no rules, rule} ?  ")
+    		rule.subnet = ask("What is the Subnet for Rule - #{no rules, rule} ?  ")
+    		rule.destination = ask("What is the Destination for Rule - #{no rules, rule} ?  ")
       }
       default_destination = ask("Default destination: ")
       rules.each {|rule| rule.default = default_destination} #default destination defined
