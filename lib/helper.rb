@@ -17,7 +17,7 @@ class Helper
    def take_routes
     no_of_route_statements = ask("Number of route statements: ",Integer) #Number of routes to be sent
     routes = Array.new(no_of_route_statements)
-    no_of_route_statements.times {|route| routes << ask("Enter Route - #{route}: ") } #routes accepted
+    1.upto(no_of_route_statements) {|route| routes << ask("Enter Route - #{route}: ") } #routes accepted
     routes.compact
    end
 
