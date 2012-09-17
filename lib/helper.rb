@@ -18,11 +18,9 @@
       routes ||= Array.new
       no_of_route_statements = ask("Number of route statements: ",Integer) #Number of routes to be sent
       no_of_route_statements.times {|i| routes << Route.new}
-      p "======bfr===  #{routes}"
       routes.each { |route|
        route.ip =  ask("Enter Route - #{no routes, route}: ")
       }
-      p "========= #{routes}"
      routes
      end
 
