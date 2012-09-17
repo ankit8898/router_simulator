@@ -1,4 +1,4 @@
-class Rules
+class Rule
   attr_accessor :ip ,:subnet, :destination, :default
 
     def initialize 

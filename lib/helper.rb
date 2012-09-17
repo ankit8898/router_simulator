@@ -3,7 +3,7 @@
       def take_rules
     	count = ask("Number of rules: ",Integer)  #Number of rules to be made
       rules  ||= Array.new
-    	count.times { |i| rules << Rules.new }
+    	count.times { |i| rules << Rule.new }
       rules.each { |rule|
     		rule.ip = ask("What is the IP for Rule - #{no rules, rule} ?  ")
     		rule.subnet = ask("What is the Subnet for Rule - #{no rules, rule} ?  ")
@@ -15,10 +15,15 @@
       end
 
      def take_routes
+      routes ||= Array.new
       no_of_route_statements = ask("Number of route statements: ",Integer) #Number of routes to be sent
-      routes = Array.new(no_of_route_statements)
-      1.upto(no_of_route_statements) {|route| routes << ask("Enter Route - #{route}: ") } #routes accepted
-      routes.compact
+      no_of_route_statements.times {|i| routes << Route.new}
+      p "======bfr===  #{routes}"
+      routes.each { |route|
+       route.ip =  ask("Enter Route - #{no routes, route}: ")
+      }
+      p "========= #{routes}"
+     routes
      end
 
      def note

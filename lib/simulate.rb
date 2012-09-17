@@ -3,7 +3,7 @@
 	 class << self
 
 		def start
-	       Rules.get_inputs
+	       Rule.get_inputs
 		end
 	  #checking the rules and transferring the packets to destination
 
@@ -19,7 +19,7 @@
 	  		ntwrk_subnet = rule.subnet.split('.').reject {|i| i.eql?("0")}
 	        ntwrk_ip = rule.ip.split('.')
 	        (4 - ntwrk_subnet.count).times {ntwrk_ip.pop}
-	        ntwrk_route = route.split('.')
+	        ntwrk_route = route.ip.split('.')
 	        (4 - ntwrk_subnet.count).times {ntwrk_route.pop}
 	        valid_ntwrk_ip, valid_ntwrk_route = ntwrk_ip.join('.') , ntwrk_route.join('.')
 	        if valid_ntwrk_route.eql?valid_ntwrk_ip
